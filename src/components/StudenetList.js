@@ -23,6 +23,15 @@ const Student = () => {
   }
   const [show, setShow] = useState(true);
 
+  // style
+  const myStyle = {
+    color:"orange"
+  }
+
+  const btnShowStyle = {
+    background: show ? "red" :  "green"
+  }
+
   return (
     <>
       {/* state */}
@@ -34,8 +43,8 @@ const Student = () => {
 
       <ul>
         <div className="header">
-          <h1>Student info ({students.length})</h1>
-          <button onClick={() => setShow(!show)}>show</button>
+          <h1 style={{color:"purple", fontSize:"25px"}}>Student info ({students.length})</h1>
+          <button onClick={() => setShow(!show)} style={btnShowStyle}>{show ? "hide" : "show"}</button>
         </div>
 
         {show == true &&
